@@ -1,0 +1,12 @@
+body {
+  font-family: "Montserrat";
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  margin: 0 70px;
+  @media (max-width: 375px) {
+    margin: 0 12px;
+  }
+}

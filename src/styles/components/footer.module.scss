@@ -1,0 +1,43 @@
+@import "../globals";
+
+.footer {
+  aspect-ratio: 6.7 / 1;
+  background-color: black;
+  display: flex;
+  margin: 3vw -78px -8px;
+  @include place-content(center, center);
+  @media (max-width: $mobile) {
+    height: 55vw;
+    margin: 7vw -20px -8px;
+  }
+
+  & .container {
+    display: flex;
+    flex-direction: column;
+    height: 7.5vw;
+    margin-top: 2vw;
+    @include place-content(center, space-between);
+    @media (max-width: $mobile) {
+      height: 30vw;
+      justify-content: center;
+      width: 113px;
+    }
+  }
+
+  & img {
+    width: 8vw;
+    @media (max-width: $mobile) {
+      width: 30vw;
+    }
+  }
+
+  small {
+    color: white;
+    @include font(1.7vw, 500);
+    @media (max-width: $mobile) {
+      font-size: 3vw;
+      margin-top: 3.5vw;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+$color1: #f6f6f6;
+$radius: 2vw;
+$mobile: 375px;
+
+@mixin grid($columns, $rowGap) {
+  display: grid;
+  grid-template-columns: $columns;
+  row-gap: $rowGap;
+}
+
+@mixin place-content($align, $justify) {
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin font($size, $weight) {
+  font-size: $size;
+  font-weight: $weight;
+}

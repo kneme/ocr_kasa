@@ -1,0 +1,36 @@
+@import "../../globals";
+
+.image {
+  aspect-ratio: 5.5 / 1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 2vw;
+  display: flex;
+  margin-bottom: 3vw;
+  @include place-content(center, center);
+  @media (max-width: $mobile) {
+    aspect-ratio: 3 / 1;
+    justify-content: start;
+    margin-bottom: 6vw;
+    filter: drop-shadow(0 0) !important;
+  }
+
+  & .text {
+    color: white;
+    filter: drop-shadow(0 0.4vw 2px rgba(0, 0, 0, 0.4));
+    text-shadow: black 0px 0px 1px, black 0px 0px 1px, black 0px 0px 1px,
+      black 0px 0px 1px, black 0px 0px 1px, black 0px 0px 1px;
+    @include font(3.2vw, 700);
+    & span {
+      @media (max-width: $mobile) {
+        display: block;
+      }
+    }
+    @media (max-width: $mobile) {
+      font-size: 6.3vw;
+      margin-left: 5vw;
+      text-shadow: none;
+    }
+  }
+}
