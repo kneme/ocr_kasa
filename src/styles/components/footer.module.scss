@@ -2,17 +2,15 @@
 
 .footer {
   aspect-ratio: 6.7 / 1;
-  background-color: black;
-  display: flex;
-  margin: 3vw -78px -8px;
+  background-color: $color4;
+  margin: 0 -78px -8px;
   @include place-content(center, center);
   @media (max-width: $mobile) {
+    aspect-ratio: initial;
     height: 55vw;
-    margin: 7vw -20px -8px;
+    margin: 0 -20px -8px;
   }
-
   & .container {
-    display: flex;
     flex-direction: column;
     height: 7.5vw;
     margin-top: 2vw;
@@ -23,16 +21,14 @@
       width: 113px;
     }
   }
-
   & img {
     width: 8vw;
     @media (max-width: $mobile) {
       width: 30vw;
     }
   }
-
   small {
-    color: white;
+    color: $color1;
     @include font(1.7vw, 500);
     @media (max-width: $mobile) {
       font-size: 3vw;

@@ -1,53 +1,49 @@
 @import "../globals";
 
 .header {
-  display: flex;
   margin: 1.5vw 0 3vw 0;
   @include place-content(center, space-between);
   @media (max-width: $mobile) {
     margin-bottom: 6vw;
   }
-
   & .logo {
     width: 15vw;
     @media (max-width: $mobile) {
-      width: 38vw;
+      width: 35vw;
     }
   }
+}
 
-  & .navigation {
-    ul {
-      display: flex;
-      list-style-type: none;
-      padding: 0;
-      li {
-        a {
-          color: black;
-          margin-left: 5vw;
-          text-decoration: none;
-          @include font(1.6vw, 500);
-          @media (max-width: $mobile) {
-            font-size: 3.2vw;
-            margin-left: 6vw;
-            text-transform: uppercase;
-          }
-        }
-      }
-      & .activeLink {
-        position: relative;
-        &::after {
-          background: black;
-          bottom: 0.1vw;
-          content: "";
-          height: 0.1vw;
-          left: 0;
-          position: absolute;
-          width: 100%;
-          @media (max-width: $mobile) {
-            height: 0.3vw;
-          }
-        }
-      }
+ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+a {
+  color: $color4;
+  margin-left: 5vw;
+  text-decoration: none;
+  @include font(1.6vw, 500);
+  @media (max-width: $mobile) {
+    font-size: 3.2vw;
+    margin-left: 6vw;
+    text-transform: uppercase;
+  }
+}
+
+.activeLink {
+  position: relative;
+  &::after {
+    background: $color4;
+    bottom: 0.1vw;
+    content: "";
+    height: 0.1vw;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    @media (max-width: $mobile) {
+      height: 0.2vw;
     }
   }
 }

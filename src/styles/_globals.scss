@@ -1,19 +1,28 @@
 $color1: #f6f6f6;
-$radius: 2vw;
+$color2: #ff6060;
+$color3: #fbfbfb;
+$color4: #000000;
 $mobile: 375px;
 
-@mixin grid($columns, $rowGap) {
+@mixin font($s, $w) {
+  font-size: $s;
+  font-weight: $w;
+}
+
+@mixin grid($c, $g) {
   display: grid;
-  grid-template-columns: $columns;
-  row-gap: $rowGap;
+  grid-template-columns: $c;
+  row-gap: $g;
 }
 
-@mixin place-content($align, $justify) {
-  align-items: $align;
-  justify-content: $justify;
-}
+@mixin place-content($a, $j) {
+  display: flex;
+  align-items: $a;
+  justify-content: $j;
+} 
 
-@mixin font($size, $weight) {
-  font-size: $size;
-  font-weight: $weight;
+@mixin background {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
