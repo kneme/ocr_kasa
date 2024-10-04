@@ -4,25 +4,37 @@ $color3: #fbfbfb;
 $color4: #000000;
 $mobile: 375px;
 
+@mixin background {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 @mixin font($s, $w) {
   font-size: $s;
   font-weight: $w;
 }
-
 @mixin grid($c, $g) {
   display: grid;
   grid-template-columns: $c;
   row-gap: $g;
 }
-
 @mixin place-content($a, $j) {
   display: flex;
   align-items: $a;
   justify-content: $j;
-} 
-
-@mixin background {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+@mixin underline($h) {
+  position: relative;
+  &::after {
+    background: $color4;
+    bottom: 0.1vw;
+    content: "";
+    height: $h;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    @media (max-width: $mobile) {
+      height: 0.2vw;
+    }
+  }
 }

@@ -1,4 +1,4 @@
-import styles from "../../styles/components/home/gallery.module.scss";
+import styles from "../../styles/components/gallery.module.scss";
 import Card from "./Card";
 import data from "../../data/locations.json";
 

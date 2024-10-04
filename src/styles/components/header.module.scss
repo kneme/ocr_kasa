@@ -33,17 +33,5 @@ a {
 }
 
 .activeLink {
-  position: relative;
-  &::after {
-    background: $color4;
-    bottom: 0.1vw;
-    content: "";
-    height: 0.1vw;
-    left: 0;
-    position: absolute;
-    width: 100%;
-    @media (max-width: $mobile) {
-      height: 0.2vw;
-    }
-  }
+  @include underline(0.1vw);
 }

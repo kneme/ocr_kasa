@@ -1,0 +1,40 @@
+@import "../globals";
+
+.container {
+  flex-direction: column;
+  margin: 100px 0;
+  @include place-content(center, space-between);
+  & img {
+    width: 35vw;
+    @media (max-width: $mobile) {
+      width: 40vw;
+    }
+  }
+  & .text {
+    color: $color2;
+    font-size: 2.2vw;
+    margin: 8vw 0;
+    & span {
+      @media (max-width: $mobile) {
+        display: inline-block;
+        width: 100%;
+      }
+    }
+    @media (max-width: $mobile) {
+      font-size: 4vw;
+      margin: 20vw 0;
+      text-align: center;
+    }
+  }
+  & .btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    @include font(1.3vw, 350);
+    @include underline(0.05vw);
+    @media (max-width: $mobile) {
+      font-size: 3.5vw;
+    }
+  }
+}

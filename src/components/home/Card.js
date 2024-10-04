@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../styles/components/home/gallery.module.scss";
+import styles from "../../styles/components/gallery.module.scss";
 
 const Card = ({ cover, title, alt }) => {
   const backgroundImageStyle = {
